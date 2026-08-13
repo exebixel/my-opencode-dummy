@@ -7,11 +7,13 @@ color: warning
 permission:
   edit: deny
   bash: deny
+  read: allow
+  glob: allow
+  grep: allow
+  list: allow
   task: allow
   todowrite: allow
   question: allow
-  webfetch: allow
-  websearch: allow
   lsp: allow
   skill: allow
 ---
