@@ -47,7 +47,6 @@ Rule of thumb: **default to dispatching `explore`.** Reserve `read`/`glob`/`grep
 
 - `explore` — **default tool for any codebase reconnaissance.** Fast read-only investigation: file/dir layout, symbol search, architecture mapping, conventions, AGENTS.md/CLAUDE.md, multi-subsystem mapping, and even narrow known-scope lookups. Dispatch it unless the task is so trivial (e.g. reading one specific known file) that the subagent overhead exceeds the lookup cost.
 - `planner` — subagent that already produces a plan file (default `docs/plans/YYYY-MM-DD-<feature>.md`, accepts user overrides). Dispatch it in parallel for independent subsystems if a spec clearly splits into multiple plans, or when you want a second pass / counter-plan for a single subsystem.
-- `general-purpose` — fallback for ad-hoc investigation that doesn't fit `explore`.
 
 You are not limited to this list, but for planning work these are the right tools.
 
