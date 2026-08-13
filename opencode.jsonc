@@ -1,0 +1,215 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": false,
+  "default_agent": "dummy",
+  "plugin": [
+    "@ex-machina/opencode-anthropic-auth"
+    // "@finger_xie/opencode-plugin-litellm"
+  ],
+  "agent": {
+    "build": {
+      "disable": true
+    },
+    "explore": {
+      "model": "opencode-go/claude-deepseek-v4-flash"
+    },
+    "general": {
+      "model": "anthropic/claude-sonnet-5",
+      "disable": true
+    }
+  },
+  "provider": {
+    "litellm": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LiteLLM (viagens.dev)",
+      "options": {
+        "baseURL": "{env:LITELLM_BASE_URL}",
+        "apiKey": "{env:LITELLM_API_KEY}"
+      },
+      "models": {
+        "claude-sonnet-5": {
+          "name": "Sonnet 5 · Crof.ai (GLM 5.2)",
+          "limit": { "context": 1000000, "output": 128000 }
+        },
+        "claude-opus-5": {
+          "name": "Opus 5 · Crof.ai (GLM 5.2)",
+          "limit": { "context": 1000000, "output": 128000 }
+        },
+        "claude-haiku-4-5": {
+          "name": "Haiku 4.5 · Crof.ai (GLM 5.2)",
+          "limit": { "context": 200000, "output": 64000 }
+        },
+        "claude-glm-5.2": {
+          "name": "GLM 5.2 · Crof.ai",
+          "limit": { "context": 200000, "output": 64000 },
+          "cost": { "input": 0.30, "output": 1.05 }
+        },
+        "claude-glm-4.7": {
+          "name": "GLM 4.7 · Crof.ai",
+          "limit": { "context": 200000, "output": 64000 },
+          "cost": { "input": 0.25, "output": 1.10 }
+        },
+        "claude-glm-4.7-flash": {
+          "name": "GLM 4.7 Flash · Crof.ai",
+          "limit": { "context": 200000, "output": 64000 },
+          "cost": { "input": 0.04, "output": 0.30 }
+        },
+        "claude-kimi-2.5-lightning": {
+          "name": "Kimi K2.5 Lightning · Crof.ai",
+          "limit": { "context": 200000, "output": 64000 },
+          "cost": { "input": 1.00, "output": 3.00 }
+        },
+        "glm-5.2": {
+          "name": "GLM 5.2 · Crof.ai",
+          "limit": { "context": 1000000, "output": 1000000 },
+          "cost": { "input": 0.30, "output": 1.05 }
+        },
+        "claude-kimi-2.7": {
+          "name": "Kimi K2.7 Code · Crof.ai",
+          "limit": { "context": 200000, "output": 64000 },
+          "cost": { "input": 0.55, "output": 2.25 }
+        },
+        "claude-kimi-3": {
+          "name": "Kimi K3 · Crof.ai",
+          "limit": { "context": 200000, "output": 64000 },
+          "cost": { "input": 2.00, "output": 8.00 }
+        },
+        "claude-gemma-4": {
+          "name": "Gemma 4 31B · Crof.ai",
+          "limit": { "context": 200000, "output": 64000 },
+          "cost": { "input": 0.10, "output": 0.30 }
+        },
+        "claude-qwen-3.5": {
+          "name": "Qwen 3.5 397B · Crof.ai",
+          "limit": { "context": 200000, "output": 64000 },
+          "cost": { "input": 0.35, "output": 1.75 }
+        },
+        "claude-deepseek-v4-pro": {
+          "name": "DeepSeek V4 Pro · Crof.ai",
+          "limit": { "context": 200000, "output": 64000 },
+          "cost": { "input": 0.35, "output": 0.80 }
+        },
+        "claude-deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash · Crof.ai",
+          "limit": { "context": 200000, "output": 64000 },
+          "cost": { "input": 0.12, "output": 0.21 }
+        },
+        "claude-glm-5.1": {
+          "name": "GLM 5.1 · Crof.ai",
+          "limit": { "context": 200000, "output": 64000 },
+          "cost": { "input": 0.45, "output": 2.15 }
+        }
+      }
+    }
+  },
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "mv*": "ask",
+      "rm*": "ask",
+      "docker*": "ask",
+      "sftp*": "deny",
+      "ssh*": "deny",
+      "grep*": "allow",
+      "egrep*": "allow",
+      "fgrep*": "allow",
+      "zgrep*": "allow",
+      "rg*": "allow",
+      "fd*": "allow",
+      "ag*": "allow",
+      "find*": "allow",
+      "find*-delete*": "ask",
+      "find*-exec*": "ask",
+      "find*-execdir*": "ask",
+      "find*-ok*": "ask",
+      "cat*": "allow",
+      "head*": "allow",
+      "tail*": "allow",
+      "cut*": "allow",
+      "less*": "allow",
+      "more*": "allow",
+      "ls*": "allow",
+      "tree*": "allow",
+      "wc*": "allow",
+      "sort*": "allow",
+      "uniq*": "allow",
+      "diff*": "allow",
+      "file*": "allow",
+      "stat*": "allow",
+      "du*": "allow",
+      "df*": "allow",
+      "which*": "allow",
+      "xargs*": "allow",
+      "env*": "allow",
+      "date*": "allow",
+      "printf*": "allow",
+      "sed*": "allow",
+      "sed*-i*": "ask",
+      "awk*": "allow",
+      "awk*>*": "ask",
+      "cd*": "allow",
+      "pwd*": "allow",
+      "echo*": "allow",
+      "whic*": "allow",
+      "opencode*": "allow",
+      "git merge*": "ask",
+      "git rebase*": "ask",
+      "git push*": "ask",
+      "git commit*": "allow",
+      "git add*": "allow",
+      "git checkout*": "ask",
+      "git restore*": "ask",
+      "git switch*": "ask",
+      "git reset*": "ask",
+      "git clean*": "ask",
+      "git pull*": "ask",
+      "git fetch*": "allow",
+      "git stash*": "ask",
+      "git cherry-pick*": "ask",
+      "git revert*": "ask",
+      "git tag*": "ask",
+      "git remote add*": "ask",
+      "git remote remove*": "ask",
+      "git remote rename*": "ask",
+      "git remote set-url*": "ask",
+      "git remote -v*": "allow",
+      "git remote show*": "allow",
+      "git remote get-url*": "allow",
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "git show*": "allow",
+      "git branch*": "allow",
+      "git blame*": "allow",
+      "git reflog*": "allow",
+      "git rev-parse*": "allow",
+      "git ls-files*": "allow",
+      "git ls-tree*": "allow",
+      "git cat-file*": "allow",
+      "git config --get*": "allow",
+      "git config -l*": "allow",
+      "git config --list*": "allow",
+      "git describe*": "allow",
+      "git help*": "allow",
+      "glab mr list*": "allow",
+      "glab issue list*": "allow",
+      "glab repo list*": "allow",
+      "glab ci list*": "allow",
+      "glab pipeline list*": "allow",
+      "glab milestone list*": "allow",
+      "glab release list*": "allow",
+      "glab runner list*": "allow",
+      "glab variable list*": "allow",
+      "glab label list*": "allow",
+      "glab schedule list*": "allow"
+    },
+    "external_directory": {
+      "*": "ask",
+      "~/.config/opencode/**": "allow",
+      "~/.ssh/**": "deny",
+      "~/.aws/**": "deny",
+      "~/.npmrc": "deny",
+      "~/.gitconfig": "deny"
+    }
+  }
+}
