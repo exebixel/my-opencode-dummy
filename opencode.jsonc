@@ -11,7 +11,7 @@
       "disable": true
     },
     "explore": {
-      "model": "opencode-go/claude-deepseek-v4-flash"
+      "model": "opencode-go/deepseek-v4-flash"
     },
     "general": {
       "model": "anthropic/claude-sonnet-5",
