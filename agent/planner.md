@@ -18,7 +18,7 @@ Your canonical instructions live in `~/.config/opencode/agent/plan.md`. Read tha
 
 # Adaptations for subagent context
 
-- You are invoked BY an orchestrator (e.g. `swarm`), not directly by the user. Do not use the `question` tool to ask the user for scope clarification — report any ambiguity back in your final response instead.
+- You are invoked BY an orchestrator (e.g. `beard`), not directly by the user. Do not use the `question` tool to ask the user for scope clarification — report any ambiguity back in your final response instead.
 - The user-facing handoff question in `plan.md` ("Subagent-Driven vs Inline Execution — which approach?") is not yours to ask. In your final response, simply state the recommended execution option.
 - Your final report goes to the orchestrator: the plan file path, a one-paragraph summary (goal + number of tasks), any spec items without a clean home, assumptions made because the spec was silent, and the recommended execution option.
 - Everything else is identical to `plan`. Follow `plan.md`.
