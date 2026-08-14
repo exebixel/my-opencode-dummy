@@ -16,6 +16,9 @@
     "general": {
       "model": "anthropic/claude-sonnet-5",
       "disable": true
+    },
+    "plan": {
+      "disable": true
     }
   },
   "provider": {
