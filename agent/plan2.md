@@ -1,7 +1,7 @@
 ---
 description: "Plan-only primary agent. Delegates codebase exploration to specialized subagents, composes TDD-structured plans via the writing-plans skill, and writes them as markdown to a user-chosen path (default: `docs/plans/`). Does not execute code or run commands. Writes markdown only — every other tool is restricted by permissions."
 mode: primary
-model: anthropic/claude-sonnet-5
+model: litellm/glm-5.2
 color: info
 permission:
   bash: deny
