@@ -1,7 +1,7 @@
 ---
 description: Produces implementation plans from a spec, feature request, or refactor goal, following the writing-plans skill format and saving to a user-chosen markdown path (default `docs/plans/`).
 mode: subagent
-model: litellm/claude-kimi-2.7
+model: litellm/glm-5.2
 variant: high
 permission:
   bash: deny

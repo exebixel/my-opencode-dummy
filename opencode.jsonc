@@ -32,74 +32,79 @@
       "models": {
         "claude-sonnet-5": {
           "name": "Sonnet 5 · Crof.ai (GLM 5.2)",
-          "limit": { "context": 1000000, "output": 128000 }
+          "limit": { "context": 1000000, "output": 131072 }
         },
         "claude-opus-5": {
           "name": "Opus 5 · Crof.ai (GLM 5.2)",
-          "limit": { "context": 1000000, "output": 128000 }
+          "limit": { "context": 1000000, "output": 131072 }
         },
         "claude-haiku-4-5": {
           "name": "Haiku 4.5 · Crof.ai (GLM 5.2)",
-          "limit": { "context": 200000, "output": 64000 }
+          "limit": { "context": 1000000, "output": 131072 }
         },
         "claude-glm-5.2": {
           "name": "GLM 5.2 · Crof.ai",
-          "limit": { "context": 200000, "output": 64000 },
+          "limit": { "context": 1000000, "output": 131072 },
           "cost": { "input": 0.30, "output": 1.05 }
         },
         "claude-glm-4.7": {
           "name": "GLM 4.7 · Crof.ai",
-          "limit": { "context": 200000, "output": 64000 },
+          "limit": { "context": 202752, "output": 202752 },
           "cost": { "input": 0.25, "output": 1.10 }
         },
         "claude-glm-4.7-flash": {
           "name": "GLM 4.7 Flash · Crof.ai",
-          "limit": { "context": 200000, "output": 64000 },
+          "limit": { "context": 202752, "output": 131072 },
           "cost": { "input": 0.04, "output": 0.30 }
         },
         "claude-kimi-2.5-lightning": {
           "name": "Kimi K2.5 Lightning · Crof.ai",
-          "limit": { "context": 200000, "output": 64000 },
+          "limit": { "context": 131072, "output": 32768 },
           "cost": { "input": 1.00, "output": 3.00 }
         },
         "glm-5.2": {
           "name": "GLM 5.2 · Crof.ai",
-          "limit": { "context": 1000000, "output": 1000000 },
+          "limit": { "context": 1000000, "output": 131072 },
           "cost": { "input": 0.30, "output": 1.05 }
         },
         "claude-kimi-2.7": {
           "name": "Kimi K2.7 Code · Crof.ai",
-          "limit": { "context": 200000, "output": 64000 },
+          "limit": { "context": 262144, "output": 262144 },
           "cost": { "input": 0.55, "output": 2.25 }
         },
         "claude-kimi-3": {
           "name": "Kimi K3 · Crof.ai",
-          "limit": { "context": 200000, "output": 64000 },
+          "limit": { "context": 1000000, "output": 262144 },
           "cost": { "input": 2.00, "output": 8.00 }
         },
         "claude-gemma-4": {
           "name": "Gemma 4 31B · Crof.ai",
-          "limit": { "context": 200000, "output": 64000 },
+          "limit": { "context": 262144, "output": 262144 },
           "cost": { "input": 0.10, "output": 0.30 }
         },
         "claude-qwen-3.5": {
           "name": "Qwen 3.5 397B · Crof.ai",
-          "limit": { "context": 200000, "output": 64000 },
+          "limit": { "context": 262144, "output": 262144 },
           "cost": { "input": 0.35, "output": 1.75 }
+        },
+        "claude-qwen-3.6": {
+          "name": "Qwen 3.6 27B · Crof.ai",
+          "limit": { "context": 262144, "output": 262144 },
+          "cost": { "input": 0.20, "output": 1.50 }
         },
         "claude-deepseek-v4-pro": {
           "name": "DeepSeek V4 Pro · Crof.ai",
-          "limit": { "context": 200000, "output": 64000 },
+          "limit": { "context": 1000000, "output": 131072 },
           "cost": { "input": 0.35, "output": 0.80 }
         },
         "claude-deepseek-v4-flash": {
           "name": "DeepSeek V4 Flash · Crof.ai",
-          "limit": { "context": 200000, "output": 64000 },
+          "limit": { "context": 1000000, "output": 131072 },
           "cost": { "input": 0.12, "output": 0.21 }
         },
         "claude-glm-5.1": {
           "name": "GLM 5.1 · Crof.ai",
-          "limit": { "context": 200000, "output": 64000 },
+          "limit": { "context": 202752, "output": 202752 },
           "cost": { "input": 0.45, "output": 2.15 }
         }
       }
@@ -187,6 +192,7 @@
     "external_directory": {
       "*": "ask",
       "~/.config/opencode/**": "allow",
+      "/tmp/**": "allow",
       "~/.ssh/**": "deny",
       "~/.aws/**": "deny",
       "~/.npmrc": "deny",
