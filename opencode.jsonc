@@ -115,6 +115,7 @@
       "*": "ask",
       "sftp*": "deny",
       "ssh*": "deny",
+      "mkdir*": "allow",
       "grep*": "allow",
       "egrep*": "allow",
       "fgrep*": "allow",
